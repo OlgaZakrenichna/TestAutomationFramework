@@ -24,12 +24,13 @@ public class DriverSingleton {
                 default: {
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--headless");
                     options.addArguments("--window-size=1920,1080");
                     driver = new ChromeDriver(options);
                 }
             }
-            logger.info(driver.manage().window().getSize());
-            driver.manage().window().maximize();
+//            logger.info(driver.manage().window().getSize());
+//            driver.manage().window().maximize();
             logger.info(driver.manage().window().getSize());
         }
         return driver;
