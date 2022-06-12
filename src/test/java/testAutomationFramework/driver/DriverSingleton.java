@@ -21,7 +21,6 @@ public class DriverSingleton {
                 default: {
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless");
                     options.addArguments("start-maximized");
                     driver = new ChromeDriver(options);
                 }
