@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class SearchResultsPage extends AbstractPage {
 
-    @FindBy(xpath = "//div['gs-title']/a[contains(@href, 'cloud.google.com/products/calculator')]")
+    @FindBy(xpath = "(//div['gs-title']/a[contains(@href, 'cloud.google.com/products/calculator')])[1]")
     WebElement searchResult;
 
     public SearchResultsPage(WebDriver driver) {
