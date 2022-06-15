@@ -25,7 +25,7 @@ public class DriverSingleton {
                     FirefoxOptions options = new FirefoxOptions();
                     options.setHeadless(true);
                     driver = new FirefoxDriver(options);
-                    driver.manage().window().setSize(new Dimension(1920, 10000));
+                    driver.manage().window().setSize(new Dimension(1920, 3000));
                     break;
                 }
                 case "chrome": {
