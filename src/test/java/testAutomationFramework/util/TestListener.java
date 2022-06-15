@@ -26,7 +26,7 @@ public class TestListener implements ITestListener {
                 .getScreenshotAs(OutputType.FILE);
         try {
             FileUtils.copyFile(screenCapture, new File(
-                    ".//target/"
+                    ".//target/screenshots/"
                             + getCurrentTimeAsString() +
                             ".png"));
         } catch (IOException e) {
