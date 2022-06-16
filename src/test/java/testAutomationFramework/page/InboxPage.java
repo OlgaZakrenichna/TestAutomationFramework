@@ -37,9 +37,7 @@ public class InboxPage extends AbstractPage {
                 refreshingNumber--;
             }
         }
-
         Matcher matcher = Pattern.compile(patternCost).matcher(cost);
-
         return matcher.find() ? matcher.group() : cost;
     }
 }

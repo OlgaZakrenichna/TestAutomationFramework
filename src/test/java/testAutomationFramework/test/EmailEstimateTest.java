@@ -14,7 +14,7 @@ public class EmailEstimateTest extends CommonConditions{
 
     @Test(description = "Check if the 'Total Estimated Cost' field in Email matches the counted value")
     public void checkCostFromEmailEqualsCountedValue() {
-        ComputeEngine testComputeEngine = ComputeEngineCreator.withParameters();
+        ComputeEngine testComputeEngine = ComputeEngineCreator.configureItem();
         pricingCalculatorPage = new CloudGoogleHomePage(driver)
                 .searchFor(textToSearch)
                 .getPricingCalculator()

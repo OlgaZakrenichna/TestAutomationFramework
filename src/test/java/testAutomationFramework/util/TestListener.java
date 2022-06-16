@@ -20,7 +20,8 @@ public class TestListener implements ITestListener {
     public void onTestFailure(ITestResult iTestResult) {
         saveScreenshot();
     }
-    private void saveScreenshot(){
+
+    private void saveScreenshot() {
         File screenCapture = ((TakesScreenshot) DriverSingleton
                 .getDriver())
                 .getScreenshotAs(OutputType.FILE);
@@ -34,7 +35,7 @@ public class TestListener implements ITestListener {
         }
     }
 
-    private String getCurrentTimeAsString(){
+    private String getCurrentTimeAsString() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern( "uuuu-MM-dd_HH-mm-ss" );
         return ZonedDateTime.now().format(formatter);
     }

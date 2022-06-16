@@ -14,7 +14,7 @@ public class ComputeEngineCreator {
     private static final String DATACENTER_LOCATION = "testdata.computeEngine.datacenterLocation";
     private static final String COMMITTED_USAGE = "testdata.computeEngine.committedUsage";
 
-    public static ComputeEngine withParameters() {
+    public static ComputeEngine configureItem() {
         return new ComputeEngine(TestDataReader.getTestData(INSTANCES_NUMBER),
                 TestDataReader.getTestData(OPERATING_SYSTEM),
                 TestDataReader.getTestData(MACHINE_CLASS),
