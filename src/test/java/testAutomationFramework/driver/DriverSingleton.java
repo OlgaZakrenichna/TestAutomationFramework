@@ -7,7 +7,6 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
@@ -42,7 +41,7 @@ public class DriverSingleton {
                     driver.manage().window().maximize();
                 }
             }
-            logger.info(driver.manage().window().getSize());
+            logger.info("Window size: " + driver.manage().window().getSize());
         }
         return driver;
     }
