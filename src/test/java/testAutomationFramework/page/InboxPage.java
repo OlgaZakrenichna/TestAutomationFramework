@@ -3,11 +3,15 @@ package testAutomationFramework.page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class InboxPage extends AbstractPage {
+    protected static final Duration TIMEOUT = Duration.ofSeconds(2);
     private final String patternCost = "\\d,\\d{3}\\.\\d{2}";
 
     @FindBy(id = "ifmail")
@@ -39,5 +43,10 @@ public class InboxPage extends AbstractPage {
         }
         Matcher matcher = Pattern.compile(patternCost).matcher(cost);
         return matcher.find() ? matcher.group() : cost;
+    }
+
+    @Override
+    protected WebElement waitVisibilityFor(WebElement element) {
+        return new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.visibilityOf(element));
     }
 }
