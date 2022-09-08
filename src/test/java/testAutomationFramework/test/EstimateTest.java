@@ -11,7 +11,7 @@ public class EstimateTest extends CommonConditions{
 
     @Test(description = "Check if the 'Total Estimated Cost' field matches the expectedCostValue")
     public void checkCostEqualsCountedValue() {
-        ComputeEngine testComputeEngine = ComputeEngineCreator.configureItem();
+        ComputeEngine testComputeEngine = ComputeEngineCreator.configureFromProperty();
         pricingCalculatorPage = new CloudGoogleHomePage(driver)
                 .searchFor(textToSearch)
                 .getPricingCalculator()

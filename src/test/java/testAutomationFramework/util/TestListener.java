@@ -8,7 +8,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import testAutomationFramework.driver.DriverSingleton;
-
 import java.io.File;
 import java.io.IOException;
 import java.time.ZonedDateTime;
@@ -17,6 +16,7 @@ import java.time.format.DateTimeFormatter;
 public class TestListener implements ITestListener {
     Logger logger = LogManager.getRootLogger();
 
+    @Override
     public void onTestFailure(ITestResult iTestResult) {
         saveScreenshot();
     }
